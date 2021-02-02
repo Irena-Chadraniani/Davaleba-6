@@ -16,6 +16,8 @@ import {
 import ProductDetails from './ProductDetails';
 import Home from "./Home";
 import Search from "./Search";
+import Authorization from "./Authorization";
+import Profile from "./Profile";
 
 
 function App() {
@@ -35,10 +37,19 @@ function App() {
           <li className="Menu">
             <Link to="/Contact">Contact</Link>
           </li>
+          <li className="Menu">
+            <Link to="/Authorization">Authorization</Link>
+          </li>
         </ul>
 
         <Switch>
-        <Route path="/Search">
+        <Route path="/Profile">
+            <Profile />
+          </Route>
+          <Route path="/Authorization">
+            <Authorization />
+          </Route>
+          <Route path="/Search">
             <Search />
           </Route>
           <Route path="/ProductsList/:page?">
